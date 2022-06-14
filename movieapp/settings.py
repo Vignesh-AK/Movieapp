@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-0rl&$yvb@l!h+*r=b8_48%5jiby6yye_n1^iv2m4dpc+!42w5!
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["movieott.herokuapp.com"]
 
 # Application definition
 
@@ -124,7 +124,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
