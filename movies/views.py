@@ -8,10 +8,17 @@ from django.contrib.auth.forms import AuthenticationForm #add this
 from django.contrib.auth.decorators import user_passes_test
 from django.contrib.auth.decorators import login_required
 from django.db.models import Count
+from sms import send_sms
+
 
 User = get_user_model()
 def check_admin(user):
-   return user.is_superuser
+    send_sms(
+    'Here is the message',
+    '+919074582622',
+    ['+917561071623'],
+    fail_silently=False)
+    return user.is_superuser
 
 
 @user_passes_test(check_admin)
