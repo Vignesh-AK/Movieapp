@@ -13,11 +13,7 @@ from sms import send_sms
 
 User = get_user_model()
 def check_admin(user):
-    send_sms(
-    'Here is the message',
-    '+919074582622',
-    ['+917561071623'],
-    fail_silently=False)
+   
     return user.is_superuser
 
 

@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-0rl&$yvb@l!h+*r=b8_48%5jiby6yye_n1^iv2m4dpc+!42w5!
 
 DEBUG = True
 
-SMS_BACKEND = 'sms.backends.console.SmsBackend'
+
 
 ALLOWED_HOSTS = ["*"]
 
