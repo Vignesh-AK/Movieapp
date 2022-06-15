@@ -74,8 +74,8 @@ def dashboard(request):
 @user_passes_test(check_admin)
 def users_list(request):
     users = User.objects.annotate(q_count=Count('movies')).order_by('q_count')[:7]
-    return redirect('upi//pay?pa=9739506060@okbizaxis&pn=Hudels%20Hospitality%20Services%20Pvt%20Ltd&mc=9402&aid=uGICAgICzpoj-Rw&tr=BCR2DN6TROGKVUD4')
-    # return render(request=request, template_name="user_list.html", context={"users":users})
+    
+    return render(request=request, template_name="user_list.html", context={"users":users})
 
 
 @user_passes_test(check_admin)
