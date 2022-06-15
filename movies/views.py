@@ -8,7 +8,6 @@ from django.contrib.auth.forms import AuthenticationForm #add this
 from django.contrib.auth.decorators import user_passes_test
 from django.contrib.auth.decorators import login_required
 from django.db.models import Count
-from sms import send_sms
 
 
 User = get_user_model()
