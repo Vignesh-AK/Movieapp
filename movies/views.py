@@ -29,7 +29,7 @@ def register_request(request):
             messages.success(request, "Registration successful." )
             
             return redirect("/")
-        messages.error(request, form.error)
+        messages.error(request, "Form is not valid")
         print("ck")
     form = NewUserForm()
     return render (request=request, template_name="register.html", context={"register_form":form})
@@ -89,7 +89,7 @@ def update_user(request,username):
             user.movies.set(movies)
             messages.success(request, "Updation successful." )
             return redirect("/")
-        messages.error(request, form.error)
+        messages.error(request, "Form is not valid")
     form = UpdateUser()
     return render (request=request, template_name="update.html", context={"update_user":form})
 
